@@ -25,12 +25,13 @@ class AppController extends Controller
         // $party = Party::where("phone_no","9136114184")->get();
         // dd($party);
 
-        $party = DB::table('parties')->where('id',1)->get();
-        echo "<pre>";
-        print_R($party);
+        // $party = DB::table('parties')->where('id',2)->delete();
+        // echo "<pre>";
+        // print_R($party);
         // $name = 'Gaurav';
         // $phone = '9136114184';
-        return "database connected";
+        // return "database connected";
+        return view("dashboard");
     }
     public function about(){
         return view("about");

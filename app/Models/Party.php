@@ -10,5 +10,11 @@ class Party extends Model
     // use HasFactory;
     protected $table = "parties";
     protected $primarykey = "id";
-    protected $fillable = array("full_name","phone_no","city");
+    protected $fillable = array("party_type","full_name","phone_no","city","address","account_holder_name","account_no","bank_name","branch_address","ifsc_code");
+
+    public function gstBills()
+    {
+        return $this->hasMany(GstBill::class);
+    }
 }
+
